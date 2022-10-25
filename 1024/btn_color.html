@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* 이 박스는 뭐하는 놈인고... */
+      .box{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin-left: 5px;
+        margin-top: 20px;
+      }
+
+      .red{
+        background-color: red;
+      }
+
+      .blue{
+        background-color: blue;
+      }
+
+      .green{
+        background-color: green;
+      }
+
+      #number{
+        font-size: 100px;
+      }
+    </style>
+</head>
+<body>
+  <!-- btn +/- -->
+  <div id="number"> 0 </div>
+  <button id="minus"> - </button>
+  <button id="plus"> + </button>
+
+  <!-- box -->
+  <div>
+    <div class="red box"></div>
+    <div class="blue box"></div>
+    <div class="green box"></div>
+  </div>
+
+  <hr>
+
+  <h1> 요일 </h1>
+  <ul id="day">
+    <li>월요일</li>
+    <li>화요일</li>
+    <li>수요일</li>
+    <li>목요일</li>
+    <li>금요일</li>
+  </ul>
+
+
+  <script>
+    let number = document.querySelector('#number')
+    let plusBtn = document.querySelector('#plus')
+    let minusBtn = document.querySelector('#minus')
+
+    plusBtn.addEventListener('click', function() {
+      number.innerText++;
+    })
+    minusBtn.addEventListener('click', function() {
+      number.innerText--;
+    })
+
+    document.querySelector('.red')
+      .addEventListener('click', function(){
+        number.style.color = 'red'
+      })
+
+    document.querySelector('.blue')
+      .addEventListener('click', function(){
+        number.style.color = 'blue'
+      })
+
+    document.querySelector('.green')
+      .addEventListener('click', function(){
+        number.style.color = 'green'
+      })
+
+    // 요일 추가하기
+    const sunday = document.createElement('li')
+    sunday.innerText = '일요일'
+
+    const day = document.querySelector('#day')
+
+    // 앞에 요소 추가하기 (append가 아니라 prepend 쓰면 됨)
+    day.prepend(sunday)   
+
+    const saturday = document.createElement('li')
+    saturday.innerText = '토요일'
+    
+    // 뒤에 요소 추가하기
+    day.append(saturday)
+
+
+    // 요일 밑 ul 위
+    const startP = document.createElement('p')
+    startP.innerText = 'start'
+    day.before(startP)
+
+    const endP = document.createElement('p')
+    endP.innerText = 'end'
+
+    day.after(endP)
+    
+
+  </script>
+</body>
+</html>
