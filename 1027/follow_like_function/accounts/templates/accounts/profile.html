@@ -62,8 +62,10 @@
 
         if (isFollowed === true) {
           followBtn.value = '언팔로우'
+          followBtn.style.color = 'red'
         } else {
           followBtn.value = '팔로우'
+          followBtn.style.color = 'green'
         }
 
         const followersCountTag = document.querySelector('#followers-count')

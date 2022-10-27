@@ -50,8 +50,10 @@
           const likeBtn = document.querySelector(`#like-${articleId}`)
           if (isLiked === true) {
             likeBtn.value = '좋아요 취소'
+            likeBtn.style.backgroundColor = 'red'
           } else {
             likeBtn.value = '좋아요'
+            likeBtn.style.backgroundColor = 'green'
           }
           })
           .catch((error) => {
