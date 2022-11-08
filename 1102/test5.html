@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    const arr = [1, 2, 3, 4, 5]
+    
+    const result = arr.some((elem) => {
+      return elem % 2 === 0
+    })
+    console.log(result)
+
+    const result2 = arr.every((elem) => {
+      return elem % 2 === 1
+    })
+    console.log(result2)
+
+
+    const chars = ['A', 'B', 'C', 'D']
+    // for loop
+    for (let idx =0; idx < chars.length; idx++) {
+      console.log(idx, chars[idx])
+    }
+
+    // for - of
+    for (const char of chars) {
+      console.log(char)
+    }
+
+    // forEach
+    chars.forEach((char, idx) => {
+      console.log(idx, char)
+    })
+
+    chars.forEach((char) => {
+      console.log(char)
+    })
+    
+
+  </script>
+</body>
+</html>

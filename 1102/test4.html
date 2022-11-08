@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <script>
+    const colors = ['red', 'blue', 'green']
+    const printFunc = function (color) {
+        console.log(color)
+    }
+    colors.forEach(printFunc)
+
+    colors.forEach(function (color) {
+        console.log(color)
+    })
+    colors.forEach((color) => {
+        console.log(color)
+    })
+
+    const numbers = [1, 2, 3]
+    
+    const doubleFunc = function (number) {
+      return number * 2
+    }
+    
+    const doubleNumbers = numbers.map(doubleFunc)
+    console.log(doubleNumbers)
+
+    
+    const products = [
+      {name: 'cucumber', type: 'vegetable'},
+      {name: 'carrot', type: 'vegetable'},
+      {name: 'banana', type: 'fruit'},
+      {name: 'apple', type: 'fruit'},
+    ]
+
+    const fruitFilter = function (product) {
+      return product.type === 'fruit'
+    }
+
+    const fruits = products.filter(fruitFilter)
+    console.log(fruits)
+
+    const tests = [90, 90, 80, 77]
+
+    const sum = tests.reduce(function (total, x) {
+      return total + x
+    }, 0)
+
+    console.log(sum)
+
+    const sum_arrow = tests.reduce((total, x) => total + x, 0) 
+    
+    console.log(sum_arrow)
+
+    const average = tests.reduce((total, x) => total + x, 0) / tests.length
+    console.log(average)
+
+    
+    const avengers = [
+      { name: 'Tony Stark', age: 45},
+      { name: 'Steve Rogers', age: 32},
+      { name: 'Thor', age: 40},
+    ]
+
+    const avenger = avengers.find(function (avenger) {
+      return avenger.name === 'Tony Stark'
+    })
+
+    const avenger2 = avengers.find((avenger) => {
+      return avenger.name === 'Steve Rogers'
+    })
+
+    console.log(avenger)
+    console.log(avenger2)
+
+
+
+  </script>
+</body>
+</html>

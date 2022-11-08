@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+
+    const numbers = [1, 2, 3, 4, 5, 6]
+    console.log(numbers[0])
+    console.log(numbers.length)
+    console.log(numbers[numbers.length - 3])
+    // console.log(numbers[-1])
+
+    numbers.reverse()
+    console.log(numbers)
+
+    numbers.push(100)
+    numbers.push(101)
+    console.log(numbers)
+    numbers.pop()
+    console.log(numbers)
+
+    console.log(numbers.includes(1))
+    console.log(numbers.includes(999))
+    
+    
+    console.log(numbers.indexOf(100))
+    console.log(numbers.indexOf(999))
+
+    let result
+    result = numbers.join()
+    console.log(result)
+
+    result = numbers.join('')
+    console.log(result)
+    
+    result = numbers.join(' ')
+    console.log(result)
+
+    result = numbers.join('-')
+    console.log(result)
+    
+
+  </script>
+</body>
+</html>

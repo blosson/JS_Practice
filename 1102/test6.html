@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+
+    const me = {
+      name: 'jack',
+      phoneNumber: '01012345678',
+      'samsung products': {
+        buds: 'Galaxy Buds Pro',
+        galaxy: 'Galaxy S99',
+      },
+    }
+
+    console.log(me.name)
+    console.log(me['name'])
+    console.log(me['samsung products'])
+    console.log(me['samsung products'].buds)
+
+    
+    const books = ['Learning JavaScript', 'Learning Python']
+    const magazines = ['Vogue', 'Science']
+
+    var bookShop = {
+      books: books,
+      magazines: magazines,
+    }
+    console.log(bookShop)
+    
+
+    const obj = {
+      greeting: function () {
+        console.log('Hi')
+      }
+    }
+    obj.greeting()
+
+    
+    const obj2 = {b: 2, c: 3, d: 4}
+    const newObj = {a: 1, ...obj2, e: 5}
+
+    console.log(newObj)
+
+    const jsObject = {
+      coffee: 'Americano',
+      iceCream: 'Cookie and Cream'
+    }
+    
+    // object -> json
+    const objToJson = JSON.stringify(jsObject)
+    console.log(objToJson)
+    console.log(typeof jsObject)
+    console.log(typeof objToJson)
+    
+    // json -> object
+    const jsonToObj = JSON.parse(objToJson)
+    console.log(jsonToObj)
+    console.log(typeof objToJson)
+    console.log(typeof jsonToObj)
+    
+
+  </script>
+</body>
+</html>
